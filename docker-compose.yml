@@ -17,6 +17,8 @@ services:
       context: ./
       dockerfile: ./docker/php/Dockerfile
     container_name: symfony-php
+    environment:
+      PHP_IDE_CONFIG: "serverName=Docker"
     restart: always
     volumes:
       - ./docker/php/php.ini:/usr/local/etc/php/conf.d/php.ini
